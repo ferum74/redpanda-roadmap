@@ -38,6 +38,7 @@ function useRevealOnScroll({ rootMargin = '0px 0px -10% 0px', threshold = 0.12 }
 
 function App() {
   useRevealOnScroll({})
+  const baseUrl = import.meta.env.BASE_URL
 
   return (
     <>
@@ -81,7 +82,11 @@ function App() {
 
           <div className="reveal" data-reveal>
             <div className="imgFrame">
-              <img className="img" src="/assets-redpanda-roadmap.jpg" alt="Roadmap digitalizace — RedPanda" />
+              <img
+                className="img"
+                src={`${baseUrl}assets-redpanda-roadmap.jpg`}
+                alt="Roadmap digitalizace — RedPanda"
+              />
             </div>
             <div className="fineprint">
               Визуал из проекта: дорожная карта цифровизации и прототип ключевых экранов мобильного приложения.
@@ -164,7 +169,7 @@ function App() {
               <div className="imgFrame">
                 <img
                   className="img"
-                  src="/assets-redpanda-ui.png"
+                  src={`${baseUrl}assets-redpanda-ui.png`}
                   alt="Пример экранов приложения: полисы, покупка, документы, поддержка и клиника"
                 />
               </div>
